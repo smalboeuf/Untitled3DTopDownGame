@@ -37,7 +37,7 @@ namespace RPG.Control
           continue;
         }
 
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && target.tag != "Player")
         {
           GetComponent<Fighter>().Attack(target.gameObject);
         }
