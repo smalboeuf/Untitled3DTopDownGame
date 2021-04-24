@@ -50,7 +50,6 @@ namespace RPG.Combat
       weapon.Spawn(rightHandTransform, leftHandTransform, animator);
     }
 
-
     private void AttackBehaviour()
     {
       transform.LookAt(target.transform);
@@ -72,7 +71,22 @@ namespace RPG.Combat
     void Hit()
     {
       if (target == null) return;
+
+      if (currentWeapon.HasProjectile())
+      {
+        currentWeapon.LaunchProjectile(rightHandTransform, leftHandTransform, target);
+      }
+      else
+      {
+        target.TakeDamage(currentWeapon.GetDamage());
+      }
+
       target.TakeDamage(currentWeapon.GetDamage());
+    }
+
+    void Shoot()
+    {
+      Hit();
     }
 
     private bool GetIsInRange()
