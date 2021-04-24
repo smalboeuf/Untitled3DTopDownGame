@@ -686,6 +686,10 @@ PrefabInstance:
       propertyPath: m_Speed
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1467884863, guid: 77eef69af8399854cabe8c0586801ffe, type: 3}
+      propertyPath: maxSpeed
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 663174079551795502, guid: 77eef69af8399854cabe8c0586801ffe,
         type: 3}
       propertyPath: healthPoints
