@@ -80,6 +80,7 @@
      <Compile Include="Assets\Scripts\SceneManagement\SavingWrapper.cs" />
      <None Include="Assets\Asset Packs\Animations\README - Usage Rights for these assets 1.txt" />
      <None Include="Assets\Asset Packs\Synty - Polygon Student Sample\README - Usage Rights for these assets.txt" />
+     <None Include="Assets\Asset Packs\SimpleFX\Materials\UnlitVertexColour_Alpha.shader" />
  <Reference Include="Cinemachine">
  <HintPath>F:/UnityProjects/3D Top-Down Hack and Slash RPG/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>

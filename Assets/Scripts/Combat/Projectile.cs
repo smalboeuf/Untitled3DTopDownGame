@@ -11,11 +11,13 @@ namespace RPG.Combat
 
     [SerializeField] float speed = 1;
     [SerializeField] bool isHoming = false;
+    [SerializeField] GameObject hitEffect = null;
     Health target = null;
     float damage = 0;
 
     private void Start()
     {
+      if (target == null) return;
       transform.LookAt(GetAimLocation());
     }
 
@@ -52,6 +54,11 @@ namespace RPG.Combat
       if (this.target != target) return;
       if (target.IsDead()) return;
       target.TakeDamage(damage);
+
+      if (hitEffect != null)
+      {
+        Instantiate(hitEffect, GetAimLocation(), transform.rotation);
+      }
       Destroy(gameObject);
     }
   }
